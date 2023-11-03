@@ -35,7 +35,7 @@ function Lobby() {
     
     return (
     <><h2>Choose a Chat Room</h2>
-      <ul className="chat-room-list">
+      <ul>
       <Link to="/room">Create new room</Link>
         {rooms == undefined || rooms.length <= 0 ?
             <h3>No Chat Rooms found </h3> :

@@ -16,8 +16,8 @@ function MessageBox({ id } : stringProp) {
     });
 
     return (
-        <div className="message-list-container" ref={containerRef}>
-            <ul className="message-list">
+        <div ref={containerRef}>
+            <ul >
                 {messages.length <= 0 ? <p> No messages available. Be the first to send a message </p> :
                  messages?.map((x) => (
                     <Message

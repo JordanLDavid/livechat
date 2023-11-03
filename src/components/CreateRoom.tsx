@@ -24,13 +24,12 @@ function CreateRoom() {
     return (<>
         <h2>Create a new room</h2>
         <Link to="/">⬅️ Back to all rooms</Link>
-        <form onSubmit={handleSubmit} className="message-input-container">
+        <form onSubmit={handleSubmit}>
             <input
                 type="text"
                 placeholder="Enter room name"
                 value={value}
                 onChange={handleRoomChange}
-                className="message-input"
                 required
                 minLength={1}
             />
@@ -39,11 +38,10 @@ function CreateRoom() {
                 placeholder="Enter description"
                 value={descValue}
                 onChange={handleDescriptionChange}
-                className="message-input"
                 required
                 minLength={1}
             />
-            <button type="submit" disabled={(value.length < 1 && descValue.length < 1)} className="send-message">
+            <button type="submit" disabled={(value.length < 1 && descValue.length < 1)}>
                 Send
             </button>
         </form>

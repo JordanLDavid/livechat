@@ -24,7 +24,7 @@ function ChatRoom() {
             <div>
                 <Link to="/">⬅️ Back to all rooms</Link>
             </div>
-            <div className="messages-container">
+            <div>
                 <MessageBox id={room.id} />
                 <InputMessageBox id={room.id} />
             </div>

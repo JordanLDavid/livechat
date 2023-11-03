@@ -18,17 +18,16 @@ function InputMessageBox({id}:stringProp)  {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="message-input-container">
+        <form onSubmit={handleSubmit}>
             <input
                 type="text"
                 placeholder="Enter a message"
                 value={value}
                 onChange={handleChange}
-                className="message-input"
                 required
                 minLength={1}
             />
-            <button type="submit" disabled={value == ""} className="send-message">
+            <button type="submit" disabled={value == ""}>
                 Send
             </button>
         </form>
