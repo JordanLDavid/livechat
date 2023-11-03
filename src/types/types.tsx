@@ -27,3 +27,12 @@ export type stringProp = {
 }
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type CallbackProp = (...args: any[]) => void
+
+export interface iMessageProps {
+    message: tMessage;
+    isOwnMessage: boolean;
+}
+
+export interface AuthProviderProps {
+    children: React.ReactNode; // Children should be of type ReactNode
+}

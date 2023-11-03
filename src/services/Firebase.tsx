@@ -25,7 +25,7 @@ async function loginWithGoogle() {
 
         const { user } = await signInWithPopup(auth, provider);
         return { uid: user.uid, displayName: user.displayName };
-    } catch (error: Error) {
+    } catch (error:any) {
         if (error.code !== 'auth/cancelled-popup-request') {
             console.error(error);
         }

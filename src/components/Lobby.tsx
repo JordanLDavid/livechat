@@ -13,12 +13,18 @@ function Lobby() {
     const [ user, loginAccount ] = useAuth();
     const [rooms, setRooms] = React.useState<tChatRoom[]>([]);
     {/*const [users, setUsers] = React.useState<tUser[]>([]);*/}
+
+    const handleLoginClick: React.MouseEventHandler<HTMLButtonElement> = async (event) => {
+        event.preventDefault(); // Prevent default button behavior if needed
+        await loginAccount(null); // Call the login logic
+    };
+
     if(!user)
     {
         return ( <>
             <h2>Log in to join a chat room!</h2>
             <div>
-                <button onClick={ loginAccount } className="login">
+                <button onClick={ handleLoginClick } className="login">
                     Login with Google
                 </button>
             </div>

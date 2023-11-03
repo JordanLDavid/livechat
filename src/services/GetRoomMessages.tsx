@@ -1,8 +1,8 @@
 import React from 'react';
 import { getMessages } from './Firebase';
-import { tChatRoom } from '../types/types';
+import { tMessage } from '../types/types';
 
-function GetRoomMessages(roomId:string) : tChatRoom[] {
+function GetRoomMessages(roomId:string) : tMessage[] {
     const [messages, setMessages] = React.useState([]);
 
     React.useEffect(() => {

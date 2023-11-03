@@ -5,7 +5,7 @@ import { Message } from './Message';
 import { stringProp } from '../types/types';
 
 function MessageBox({ id } : stringProp) {
-    const containerRef = React.useRef(null);
+    const containerRef = React.useRef<HTMLDivElement>(null);
     const [ user ] = useAuth();
     const messages = GetRoomMessages(id);
 
@@ -23,7 +23,7 @@ function MessageBox({ id } : stringProp) {
                     <Message
                         key={x.id}
                         message={x}
-                        isOwnMessage={x.userId === user.uid}
+                        isOwnMessage={x.userId === user?.uid}
                     />
                 ))}
             </ul>
